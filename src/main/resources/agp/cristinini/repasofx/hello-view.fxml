@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="agp.cristinini.repasofx.HelloController">
+    <right>
+        <ListView fx:id="listaGente" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </right>
+    <center>
+        <TableView fx:id="tablaGente" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="cN" prefWidth="75.0" text="Nome" />
+                <TableColumn fx:id="cD" prefWidth="75.0" text="DNI" />
+                <TableColumn fx:id="c18" prefWidth="75.0" text="+18" />
+                <TableColumn fx:id="cDate" prefWidth="75.0" text="Data" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+            <contextMenu>
+                <ContextMenu>
+                    <items>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#editarPersona" text="Edit" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#borrarPersona" text="Remove" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+        </TableView>
+    </center>
+    <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+              <MenuBar>
+                  <Menu text="Cristina Folla Moros">
+                      <MenuItem fx:id="engadir" text="_Add" />
+                      <SeparatorMenuItem />
+                      <MenuItem fx:id="borrar" text="_Borrar" />
+                      <SeparatorMenuItem />
+                      <MenuItem fx:id="filtro" text="_Filtro" />
+      
+                  </Menu>
+              </MenuBar>
+                 <TextField fx:id="lupa" promptText="Busca gente..." />
+         </children>
+      </HBox>
+    </top>
+   <left>
+      <Button fx:id="fotoButon" mnemonicParsing="false" BorderPane.alignment="CENTER">
+            <graphic>
+                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@unnamed.png" />
+                </image>
+                </ImageView>
+            </graphic>
+      </Button>
+   </left>
+</BorderPane>
