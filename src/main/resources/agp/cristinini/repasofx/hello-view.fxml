@@ -37,7 +37,7 @@
       <HBox BorderPane.alignment="CENTER">
          <children>
               <MenuBar>
-                  <Menu text="Cristina Folla Moros">
+                  <Menu text="Folla Moros">
                       <MenuItem fx:id="engadir" text="_Add" />
                       <SeparatorMenuItem />
                       <MenuItem fx:id="borrar" text="_Borrar" />
